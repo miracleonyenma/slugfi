@@ -1,0 +1,2 @@
+# slugfi
+Generate slugs
