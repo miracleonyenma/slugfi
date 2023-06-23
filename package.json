@@ -10,7 +10,9 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.8.0",
     "@types/node": "^18",
+    "@vite-pwa/nuxt": "^0.1.0",
     "nuxt": "^3.6.0",
     "typescript": "latest"
   }
