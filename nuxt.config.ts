@@ -69,35 +69,34 @@ export default defineNuxtConfig({
     workbox: {
       navigateFallback: "/",
       globPatterns: [
-        "**/*.{js,css,html,png,svg,ico,webmanifest}",
-        "**/manifest.webmanifest",
+        "**/*.{js,css,html,png,jpg,jpeg,svg,woff2,woff,ttf,eot,webmanifest}",
       ],
     },
     client: {
       installPrompt: true,
       // you don't need to include this: only for testing purposes
       // if enabling periodic sync for update use 1 hour or so (periodicSyncForUpdates: 3600)
-      // periodicSyncForUpdates: 20,
+      periodicSyncForUpdates: 20,
     },
     devOptions: {
       enabled: true,
-      // suppressWarnings: true,
+      suppressWarnings: true,
       navigateFallbackAllowlist: [/^\/$/],
       type: "module",
     },
     registerType: "autoUpdate",
   },
-  // nitro: {
-  //   esbuild: {
-  //     options: {
-  //       target: "esnext",
-  //     },
-  //   },
-  //   prerender: {
-  //     routes: ["/"],
-  //   },
-  // },
-  // imports: {
-  //   autoImport: true,
-  // },
+  nitro: {
+    esbuild: {
+      options: {
+        target: "esnext",
+      },
+    },
+    prerender: {
+      routes: ["/"],
+    },
+  },
+  imports: {
+    autoImport: true,
+  },
 });
