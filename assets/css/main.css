@@ -1,0 +1,88 @@
+/* ./assets/css/main.css */
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Geologica:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-slate-800 bg-slate-50;
+}
+
+/* BTN */
+.btn {
+  @apply relative px-4 py-2 font-semibold text-slate-700 bg-gradient-to-bl from-white to-slate-400  rounded-full;
+  /* @apply border border-slate-200; */
+}
+.btn::before {
+  @apply absolute left-[1px] top-[1px] w-[calc(100%-2px)] h-[calc(100%-2px)] bg-gradient-to-bl from-white via-slate-50 to-slate-300  rounded-full inset-0;
+  content: "";
+}
+
+.btn:hover,
+.btn:focus {
+  @apply from-slate-300 to-slate-100;
+}
+
+.btn:active::before {
+  @apply from-slate-300 via-slate-50 to-white;
+}
+
+.btn > * {
+  @apply relative z-10;
+}
+
+.btn:has(> .icon) {
+  @apply p-2;
+}
+/* END BTN */
+
+/* ICON */
+.icon {
+  @apply w-6 h-6;
+}
+
+.icon--sm {
+  @apply w-4 h-4;
+}
+/* END ICON */
+
+/* IMG CONT */
+.img-cont {
+  @apply relative;
+}
+
+.img-cont > img {
+  @apply w-full;
+}
+/* END IMG CONT */
+
+/* SITE SECTION */
+.site-section {
+  @apply p-4 py-12;
+}
+
+.site-section > .wrapper {
+  @apply max-w-6xl mx-auto;
+}
+/* END SITE SECTION */
+
+/* FORM */
+.form-label {
+  @apply text-slate-600 font-semibold;
+}
+
+.form-control {
+  @apply flex flex-col gap-1;
+}
+
+.form-input {
+  @apply p-2 border border-slate-200 rounded-lg;
+}
+/* END FORM */
+
+/* ACTION CONT */
+.action-cont {
+  @apply flex justify-end gap-2;
+}
+/* END ACTION CONT */

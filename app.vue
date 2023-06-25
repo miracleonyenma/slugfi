@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <VitePwaManifest />
+  <VitePwaManifest />
+  <SiteHeader />
+  <main class="site-main">
     <NuxtPage />
-  </div>
+  </main>
+  <Toast />
 </template>

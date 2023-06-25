@@ -1,12 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "@vite-pwa/nuxt"],
+  devtools: { enabled: false },
+  css: ["~/assets/css/main.css"],
   pwa: {
     manifest: {
       name: "Slugfi - Slug Generator",
       short_name: "Slugfi",
       description: "Generate slugs for your projects",
+      display: "standalone",
       theme_color: "#ffffff",
       id: "/",
       icons: [
@@ -87,11 +88,11 @@ export default defineNuxtConfig({
     registerType: "autoUpdate",
   },
   nitro: {
-    esbuild: {
-      options: {
-        target: "esnext",
-      },
-    },
+    // esbuild: {
+    //   options: {
+    //     target: "esnext",
+    //   },
+    // },
     prerender: {
       routes: ["/"],
     },
@@ -99,4 +100,5 @@ export default defineNuxtConfig({
   imports: {
     autoImport: true,
   },
+  modules: ["@nuxtjs/tailwindcss", "@vite-pwa/nuxt"],
 });
